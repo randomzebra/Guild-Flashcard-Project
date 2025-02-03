@@ -26,9 +26,12 @@ function DeckStudy() {
             setCurrentCardIndex(currentCardIndex + 1);
             setIsFlipped(false);
         } else {
-            if (window.confirm("Restart cards?")) {
+            const choice = window.confirm("Restart cards?")
+            if (choice) {
                 setCurrentCardIndex(0);
                 setIsFlipped(false);
+            } else {
+                window.location.href = `/`;
             }
         }
     };

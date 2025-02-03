@@ -52,6 +52,17 @@ function CardForm() {
         }
     };
 
+
+    const handleAdd = (event) => { 
+        event.preventDefault();
+        const abort = new AbortController();
+        createCard(deckId, formData, abort.signal).then((response) => {
+            window.location.href = `/decks/${deckId}/cards/new`;
+        }).catch((error) => {
+            window.alert("There was an error creating the card, please try again in a few moments");
+        });
+    };
+
     return (
         <div>
             <nav aria-label="breadcrumb">
@@ -84,7 +95,10 @@ function CardForm() {
                         required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Save</button>
+                <div className="btn-group">
+                    <button type="button" className="btn btn-secondary" onClick={handleAdd}>Save</button>
+                    <button type="submit" className="btn btn-primary">Done</button>
+                </div>
             </form>
         </div>
     );
