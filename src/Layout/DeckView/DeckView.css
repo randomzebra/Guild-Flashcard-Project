@@ -1,0 +1,25 @@
+
+.btn {
+    padding: 8px 16px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 5px;
+}
+
+.card {
+    border: 2px solid #000; 
+    border-radius: 0px; 
+}
+
+.card:not(:last-child) {
+    border-bottom: 0;
+}
+
+.btn-int {
+    max-width: 100px; 
+}
+
+.card-text {
+    padding: 15px;
+}

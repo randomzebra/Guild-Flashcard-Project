@@ -1,0 +1,14 @@
+label {
+    display: block;
+}
+
+form {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
